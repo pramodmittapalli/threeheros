@@ -1,0 +1,14 @@
+<tr>
+  <td class="celebrity">
+    <span class="content"><%= celebrity.name %></span>
+    <span class="content"><%= celebrity.description %></span>
+  </td>
+
+  <% if current_user?(celebrity.user) %>
+  <td>
+    <%= link_to "delete", celebrity, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => celebrity.name %>
+  </td>
+  <% end %>
+</tr>

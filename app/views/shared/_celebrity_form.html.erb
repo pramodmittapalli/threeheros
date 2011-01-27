@@ -1,0 +1,14 @@
+<%= form_for @celebrity do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.text_area :name %>
+  </div>
+  <h1 class="celebrity">Tell his story</h1> 
+  <div class="field">
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

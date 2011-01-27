@@ -1,0 +1,13 @@
+<tr>
+  <td class="celebrity">
+    <span class="content"><%= feed_item.name %></span>
+    <span class="content"><%= feed_item.description %></span>
+  </td>
+  <% if current_user?(feed_item.user) %>
+  <td>
+    <%= link_to "delete", feed_item, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => feed_item.name %>
+  </td>
+  <% end %>
+</tr>
